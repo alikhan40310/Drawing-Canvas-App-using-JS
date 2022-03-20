@@ -1,0 +1,96 @@
+:root{
+    --white: #fff;
+    --base: #333;
+    --main: #222;
+    --red:#ff4757;
+    --green:#0be881;
+    --blue:#1e90ff;
+    --yellow:#ffdd59;
+    --purple:#7d5fff;
+    --orange:#fd9644;
+    --light-black: #111;
+}
+body{
+    font-size: 16px;
+    color: var(--base);
+    font-family: 'Poppins', sans-serif;
+}
+section{
+    display: flex;
+    background: var(--base);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    // margin: 0 auto;
+}
+.white{
+    background-color: var(--white);
+}
+.red{
+    background-color: var(--red);
+}
+.green{
+    background-color: var(--green);
+}
+.blue{
+    background-color: var(--blue);
+}
+.yellow{
+    background-color: var(--yellow);
+}
+.purple{
+    background-color: var(--purple);
+}
+.orange{
+    background-color: var(--orange);
+}
+.containerStyle{
+    box-shadow: inset -0.5vh -0.5vh 0.7vh var(--light-black), inset 0.5vh 0.5vh 0.7vh var(--base);
+    padding: 30px;
+    border-radius: 10px;
+}
+.canvasStyle{
+    border-radius: 10px;
+    background: var(--main);
+    margin-bottom: 30px;
+    cursor: crosshair;
+    box-shadow:-0.5vh -0.5vh 0.7vh var(--light-black), 0.5vh 0.5vh 0.7vh var(--base);
+}
+.editBox{
+    width: 650px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--main);
+    box-shadow:-0.5vh -0.5vh 0.7vh var(--light-black), 0.5vh 0.5vh 0.7vh var(--base);
+    border-radius: 10px;
+    padding: 10px;  
+    i{
+        font-size: 25px;
+        color: var(--white);
+        margin: 5px;
+        cursor: pointer;
+    }
+    input{
+        width: 80px;
+        cursor: pointer;
+    }
+}
+.colorBox {
+    display: flex;
+    width: 45%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 50px;
+
+}
+.colorBox > div {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+.colorBox > div:active {
+    opacity: 0.6;
+}
