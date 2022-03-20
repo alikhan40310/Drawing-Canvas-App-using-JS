@@ -1,59 +1,27 @@
+function colorChange(data) {
+    color =  data;
+    document.getElementById('editBox').style.border = `2px solid ${color}`;
+}
+window.addEventListener("load", () => {
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    // resizing
+    canvas.width = 650;
+    canvas.height = 350;
+    // event listeners
+    canvas.addEventListener("mousedown", startPosition);
+    canvas.addEventListener("touchstart", startPosition);
+    canvas.addEventListener("mouseup", endPosition);
+    canvas.addEventListener("touchend", endPosition);
+    canvas.addEventListener("mousemove", draw);
+    canvas.addEventListener("touchmove", draw);
+    document.querySelector("#clear").addEventListener("click", clearCanvas);
+    document.querySelector("#undo").addEventListener("click", undo);
+    document.querySelector("#save").addEventListener("click", save);
+    // variables
+    let painting = false;
+    let restore = [];
 
-let x=0;
-function getfunc() {
-    //newvalue=previousvause+1
-
-    
-    // add = x + 1;
-    x= x + 100;
-    document.getElementById('paragraph').innerHTML = x;
-    // document.getElementById("paragraph").style.display = "block";
-}
-   
-
-function resetfunc(){
-     x=0;
-    document.getElementById('paragraph').innerHTML = x;
-}
-function decfunc(){
-    x = x - 1;
-    document.getElementById('paragraph').innerHTML = x;
-}
 
 
-// square function code
-function squarefunc(){
-    var y,z;
-    var y = document.getElementById('number').value;
-    z= y*y;
-    document.getElementById('result').innerHTML = z;
-}
-function addvalue(){
-    var firstvalue,secondvalue,addresult;
-    var firstvalue = document.getElementById('firstbox').value;
-    var secondvalue = document.getElementById('secondbox').value;
-    
-    addresult = firstvalue + secondvalue;
-    document.getElementById('finalresult').innerHTML = addresult;
-}
-function mulvalue(){
-    var firstvalue,secondvalue,addresult;
-    var firstvalue = document.getElementById('firstbox').value;
-    var secondvalue = document.getElementById('secondbox').value;
-    addresult = firstvalue * secondvalue;
-    document.getElementById('finalresult').innerHTML = addresult;
-}
-function subvalue(){
-    var firstvalue,secondvalue,addresult;
-    var firstvalue = document.getElementById('firstbox').value;
-    var secondvalue = document.getElementById('secondbox').value;
-    addresult = firstvalue - secondvalue;
-    document.getElementById('finalresult').innerHTML = addresult;
-}
-function divvalue(){
-    var firstvalue,secondvalue,addresult;
-    var firstvalue = document.getElementById('firstbox').value;
-    var secondvalue = document.getElementById('secondbox').value;
-    addresult = firstvalue / secondvalue;
-    document.getElementById('finalresult').innerHTML = addresult;
-}
+});
