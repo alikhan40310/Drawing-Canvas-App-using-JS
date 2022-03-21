@@ -18,6 +18,10 @@ Using BootStrap for the purpose of responsiveness of the canvas
 
 Style the canvas by using SASS (Syntatically Awesome Style Sheet).
 
+### Google Fonts
+
+Using Google fonts "Poppins, sans-serif"
+
 ## Main Highlights
 
 In this project user can drawing a painting with different color, also change the thickness of the pen.
